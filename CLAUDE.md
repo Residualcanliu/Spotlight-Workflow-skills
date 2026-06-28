@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 这是 **Spotlight Workflow（探照灯式工作流引擎）** 的开发项目。包含一个主技能和五个子命令技能，共同构成一套完整的个人工作流操作系统。
 
-**当前状态：v2.5，已加入 TODO 数量弹性（默认 3 条，复杂可 4+）和"何时扩展到 4 条"判断表。**
+**当前状态：v2.6，新增快速通道（短问题跳过全流程）、复盘文件大小管理（防臃肿）、命令入口简化（/spotlight 唯一入口）。**
 
 ## 项目结构
 

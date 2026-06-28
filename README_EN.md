@@ -256,6 +256,6 @@ Personal use. This isn't an open-source project — it's an operating system for
 
 ---
 
-> **Last updated:** 2026-06-28 · **Version:** v2.5
+> **Last updated:** 2026-06-28 · **Version:** v2.6
 >
-> Grown from real failures and iterations. Not designed — evolved.
+> Fast path · Single entry · Learn compression. Grown from real failures and iterations. Not designed — evolved.
