@@ -242,7 +242,7 @@ learn/
 cp -r spotlight/ spotlight-init/ spotlight-work/ spotlight-check/ spotlight-learn/ spotlight-style/ ~/.claude/skills/
 
 # 2. 输入 /spotlight 开始
-# 首次运行会引导你设置 learn（复盘库）和 claudework（项目工作区）的位置
+# 首次运行默认在当前目录创建 learn/ 和 claudework/，一键确认即可
 ```
 
 ---
@@ -269,6 +269,6 @@ Spotlight 会在任务中自动检测并调用已安装的关联技能：
 
 ---
 
-> **最后更新：** 2026-06-28 · **版本：** v2.6
+> **最后更新：** 2026-06-28 · **版本：** v2.7
 >
-> 快速通道 · 唯一入口 · 复盘防臃肿。从一次次翻车和改进中长出来的东西。不是设计出来的，是演化出来的。
+> 核心 ~9KB 常驻 · 参考手册按需 · 初始化一键默认。从一次次翻车和改进中长出来的东西。不是设计出来的，是演化出来的。

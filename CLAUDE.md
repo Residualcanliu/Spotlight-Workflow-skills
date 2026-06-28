@@ -6,26 +6,28 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 这是 **Spotlight Workflow（探照灯式工作流引擎）** 的开发项目。包含一个主技能和五个子命令技能，共同构成一套完整的个人工作流操作系统。
 
-**当前状态：v2.6，新增快速通道（短问题跳过全流程）、复盘文件大小管理（防臃肿）、命令入口简化（/spotlight 唯一入口）。**
+**当前状态：v2.7，SKILL.md 拆分为核心指令（~9 KB 常驻加载）和 REFERENCE.md（按需读取），初始化流程简化（默认当前目录）。**
 
 ## 项目结构
 
 ```
 spotlight-workflow/
-├── README.md              ← 功能说明（中文，有个性）
-├── README_EN.md           ← 功能说明（英文版）
-├── SKILL.md               ← 主技能 /spotlight（自动模式）
+├── README.md              ← 功能说明（中文）
+├── README_EN.md           ← 功能说明（英文）
+├── SKILL.md               ← 核心指令（~9 KB，每次加载）
+├── REFERENCE.md           ← 参考手册（~14 KB，按需读取）
 ├── CLAUDE.md              ← 本文件
+├── version.md             ← 版本迭代记录
 ├── spotlight-init/
-│   └── SKILL.md           ← /spotlight-init（强制初始化安装）
+│   └── SKILL.md           ← /spotlight-init
 ├── spotlight-work/
-│   └── SKILL.md           ← /spotlight-work（完整工作流模式）
+│   └── SKILL.md           ← /spotlight-work
 ├── spotlight-check/
-│   └── SKILL.md           ← /spotlight-check（安装状态检查）
+│   └── SKILL.md           ← /spotlight-check
 ├── spotlight-learn/
-│   └── SKILL.md           ← /spotlight-learn（仅思考模式）
+│   └── SKILL.md           ← /spotlight-learn
 └── spotlight-style/
-    └── SKILL.md           ← /spotlight-style（写作风格切换）
+    └── SKILL.md           ← /spotlight-style
 ```
 
 ## 命令体系

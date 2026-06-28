@@ -43,3 +43,5 @@ description: >
      - §七 核心铁律速查
    - 项目默认创建在 `{claudework_path}` 下
    - 任务完成后自动写入 `{learn_path}` 复盘
+
+> 详细避坑清单、工具速查、思维模式见同目录下的 `REFERENCE.md`。按需读取，无需一次加载。

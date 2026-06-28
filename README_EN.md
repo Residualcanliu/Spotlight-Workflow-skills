@@ -244,8 +244,8 @@ You don't fall into the same hole twice — and the library doesn't become a blo
 cp -r spotlight/ spotlight-init/ spotlight-work/ spotlight-check/ spotlight-learn/ spotlight-style/ ~/.claude/skills/
 
 # 2. Type /spotlight to begin
-# First run will guide you through setting up learn (retrospective library)
-# and claudework (project workspace) locations
+# First run creates learn/ and claudework/ in your current directory by default.
+# One confirmation, done.
 ```
 
 ---
@@ -272,6 +272,6 @@ Personal use. This isn't an open-source project — it's an operating system for
 
 ---
 
-> **Last updated:** 2026-06-28 · **Version:** v2.6
+> **Last updated:** 2026-06-28 · **Version:** v2.7
 >
-> Fast path · Single entry · Learn compression. Grown from real failures and iterations. Not designed — evolved.
+> Core ~9KB always-loaded · Reference on-demand · One-click init. Grown from real failures and iterations. Not designed — evolved.

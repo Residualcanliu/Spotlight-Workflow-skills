@@ -56,3 +56,5 @@ description: >
    - 全局 CLAUDE.md 不存在 → "全局 CLAUDE.md 不由 Spotlight 管理。如需创建，请运行 /init 或手动创建 `~/.claude/CLAUDE.md`。"
 
 5. **不执行任何实际任务**。输出报告后即结束。
+
+> 详细避坑清单、工具速查、思维模式见同目录下的 `REFERENCE.md`。按需读取，无需一次加载。
