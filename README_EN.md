@@ -9,12 +9,20 @@
 ## How This System Works
 
 ```
-User asks a question ──────────────────────────────────────┐
-    │                                                       │
-    ▼                                                       │
+User asks a question
+    │
+    ▼
+┌──────────────────────────────────────────┐
+│  Fast path check                          │
+│  ≤ 20 chars or single file? → Just do it │
+│  Multi-file / multi-step? → Full process  │
+└──────────────────────┬───────────────────┘
+                       │ (full process)
+                       ▼
 ┌─────────────────┐                                         │
-│  Review learn    │ ← Read recent retrospectives,           │
-│  (knowledge base)│    recall past lessons learned          │
+│  Review learn    │ ← Read last 3 summaries only,           │
+│  (summary mode)  │    not full library. Auto-compress:     │
+│                  │    >20 items → 5 core principles        │
 └───────┬─────────┘                                         │
         ▼                                                   │
 ┌─────────────────┐                                         │
@@ -34,13 +42,13 @@ User asks a question ───────────────────�
         ▼                                                   │
 ┌─────────────────┐                                         │
 │  Retrospective   │ ← Errors→Fixes, optimizations, insights │
-│  (write to learn) │    Structured template into learn dir  │
+│  (write to learn) │    ≤50 chars each, auto-compress at 20  │
 └───────┬─────────┘                                         │
         │                                                   │
         └────────────────────────────────────────────────→ Retrieved on next task
 ```
 
-> Every task is a learning opportunity. The learn directory is this system's long-term memory — you never pay tuition for the same mistake twice.
+> Fast path prevents noise. Summary mode prevents bloat. The learn directory is this system's long-term memory — you never pay tuition for the same mistake twice.
 
 ---
 
@@ -71,12 +79,13 @@ User's attention (the spotlight beam)
 ## System Overview
 
 ```
-/spotlight (default entry point)
+/spotlight (single entry point)
       │
-      ├─ Have a task? → Execute it, applying all rules and guardrails
-      │                 Then check / offer to install the full workflow
+      ├─ Short / single-file? → Fast path: just do it
       │
-      └─ No task?    → Check installation status directly
+      ├─ Complex task? → Review learn → Decompose → TODO → Execute → Retro
+      │
+      └─ No task? → Check installation status
                       │
                  ┌────┴────┐
            Installed    Not installed → guided setup → learn + claudework
@@ -88,11 +97,13 @@ User's attention (the spotlight beam)
     │          Spotlight Engine            │
     │                                     │
     │  🔦 Attention-driven decomposition  │
+    │  ⚡ Fast path: skip ceremony for     │
+    │     short/single-file requests       │
     │  📋 TODO-driven execution            │
     │  ✍️  Writing rules + style framework │
     │  🧠 Thinking pattern matching        │
     │  🕳️ Automatic pitfall prevention     │
-    │  📝 Retrospective → learn library    │
+    │  📝 Retrospective + auto-compression │
     │  🔗 Skill discovery + recommendations│
     └─────────────────────────────────────┘
 ```
@@ -101,14 +112,17 @@ User's attention (the spotlight beam)
 
 ## Commands
 
-| Command | When to use |
+**You only need to remember one: `/spotlight`.** The system auto-detects your intent and routes accordingly.
+
+| You say | System does |
 |---------|-------------|
-| `/spotlight [task]` | Daily default. Execute the task if provided, otherwise check status |
-| `/spotlight-init` | First-time setup, or reconfigure learn / claudework paths |
-| `/spotlight-work` | Starting a new project — full lifecycle management + auto-retrospective |
-| `/spotlight-check` | Diagnostic report on current installation (no task executed) |
-| `/spotlight-learn` | Quick consults, ad-hoc tasks, don't want to create project folders |
-| `/spotlight-style` | Toggle writing style mode (blended ↔ learn-only) |
+| `/spotlight write my report` | Execute task (fast path check → full process or quick action) |
+| `/spotlight init` | Guided setup of learn + claudework |
+| `/spotlight check` | Installation diagnostic report |
+| `/spotlight toggle style` | Flip blended ↔ learn-only mode |
+| `/spotlight` (no input) | Check status, suggest next steps |
+
+Sub-commands (`/spotlight-init`, `/spotlight-work`, etc.) still exist but are optional.
 
 ---
 
@@ -205,19 +219,21 @@ Full list: [SKILL.md §4](./SKILL.md).
 
 ## Retrospective System: Never Pay Tuition Twice
 
-Every completed project (or memorable mistake) gets a structured retrospective written to the learn directory:
+Every completed project gets a structured retrospective. Anti-bloat rules:
+
+- **Each lesson ≤ 50 chars**: just enough to capture symptom → fix
+- **Auto-compress at 20 items**: merge into 5 core principles
+- **Only read last 3 summaries**: before next task — don't load the whole library
 
 ```
 learn/
-└── YYYY-MM-DD-project-name.md
-    ├── Project overview
-    ├── Errors → Fixes (concrete symptoms + solutions)
-    ├── Optimizations (before → after)
-    ├── User methodology observations (thinking patterns, preferences)
-    └── Key takeaways (2-5 actionable rules)
+├── YYYY-MM-DD-project-name.md    ← structured retrospective
+├── YYYY-MM-DD-project-name.md    ← auto-compressed at 20 items
+├── ...
+└── archive/                      ← old files archived at 30+
 ```
 
-Before the next task starts, recent retrospectives are reviewed automatically. You don't fall into the same hole twice.
+You don't fall into the same hole twice — and the library doesn't become a bloated black hole.
 
 ---
 
