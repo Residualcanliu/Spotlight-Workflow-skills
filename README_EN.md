@@ -2,6 +2,46 @@
 
 > Not a prompt template. An operating system for how you think, execute, and learn — encoded into reusable skill files.
 
+🌐 [中文](./README.md) · [English](./README_EN.md)
+
+---
+
+## How This System Works
+
+```
+User asks a question ──────────────────────────────────────┐
+    │                                                       │
+    ▼                                                       │
+┌─────────────────┐                                         │
+│  Review learn    │ ← Read recent retrospectives,           │
+│  (knowledge base)│    recall past lessons learned          │
+└───────┬─────────┘                                         │
+        ▼                                                   │
+┌─────────────────┐                                         │
+│  Decompose task  │ ← Reverse-engineer from the goal        │
+│  (Spotlight way) │    Only deep-dive where attention goes  │
+└───────┬─────────┘                                         │
+        ▼                                                   │
+┌─────────────────┐                                         │
+│  Create TODOs    │ ← Default 3 items, 4+ for complex tasks │
+│  (pick a template)│   Bug / Feature / Research / Doc / Review│
+└───────┬─────────┘                                         │
+        ▼                                                   │
+┌─────────────────┐                                         │
+│  Execute + Iterate│ ← Writing rules & pitfalls auto-apply  │
+│  (build & refine)│    Present draft, leave room for iteration│
+└───────┬─────────┘                                         │
+        ▼                                                   │
+┌─────────────────┐                                         │
+│  Retrospective   │ ← Errors→Fixes, optimizations, insights │
+│  (write to learn) │    Structured template into learn dir  │
+└───────┬─────────┘                                         │
+        │                                                   │
+        └────────────────────────────────────────────────→ Retrieved on next task
+```
+
+> Every task is a learning opportunity. The learn directory is this system's long-term memory — you never pay tuition for the same mistake twice.
+
 ---
 
 ## Why "Spotlight"?
