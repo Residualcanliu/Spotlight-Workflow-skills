@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 这是 **Spotlight Workflow（探照灯式工作流引擎）** 的开发项目。包含一个主技能和五个子命令技能，共同构成一套完整的个人工作流操作系统。
 
-**当前状态：v2.7，SKILL.md 拆分为核心指令（~9 KB 常驻加载）和 REFERENCE.md（按需读取），初始化流程简化（默认当前目录）。**
+**当前状态：v3.0，SKILL.md 拆分为核心指令（~9 KB 常驻加载）和 REFERENCE.md（按需读取），初始化流程简化（默认当前目录）。写作铁律已从三项扩至六项。**
 
 ## 项目结构
 
