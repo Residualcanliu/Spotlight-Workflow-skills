@@ -186,15 +186,34 @@ This is one of Spotlight's most distinctive features. Writing and expression are
 
 Toggle with `/spotlight-style`.
 
-### Three Iron Rules
+### Eleven Iron Rules
 
-1. **No parentheses for parameters** — `Adam, learning rate 0.0008` not `Adam(lr=0.0008)`
+Full specification with examples, rationale, and real revision cases: [`WRITING.md`](WRITING.md).
+
+**Word choice and sentence patterns**
+
+1. **No parentheses for parameters** — `Adam, learning rate 0.0008`, not `Adam(lr=0.0008)`
 2. **No reflections in procedure steps** — steps describe what was done, not what was learned
 3. **Results in a single paragraph** — one summary, not a per-scenario breakdown
+4. **No "in one sentence" openers** — if you're going to summarize, just summarize
+5. **No "in plain English..." preambles** — the reader is a person; what came before was already meant to be read
+6. **No "not A, but B"** — state B first, then say what makes it better than A
+
+**Structure and tone**
+
+7. **Headings are noun phrases** — "Query Flow", not "How a Query Goes"
+8. **No meta-discourse** — no previews, no suspense, no self-reference, no guided tours
+9. **Em dashes break clauses, they don't build punchlines** — they are rare in technical Chinese writing
+10. **State the count, then number the list** — "Two failure modes, as follows: 1. 2."
+11. **Formal verbs, positive conclusions only** — "adopt/detect/confirm", not "use/grab/touch"; no hypothetical counter-arguments
+
+> The root of AI-sounding prose: text that talks **about the text itself** rather than about facts.
+> Guided tours, suspense, rhetorical pauses, personification, question headings, punchline endings —
+> they read smoothly but add tone, not information.
 
 ### Five-Dimensional Style Framework
 
-Analyze any reference text across five dimensions: overall structure → paragraph flow → language features → deviation from genre norms → one-sentence essence.
+Analyze any reference text across five dimensions: overall structure → paragraph flow → language features → deviation from genre norms → overall essence.
 
 ---
 
@@ -272,6 +291,6 @@ Personal use. This isn't an open-source project — it's an operating system for
 
 ---
 
-> **Last updated:** 2026-06-28 · **Version:** v2.7
+> **Last updated:** 2026-09-20 · **Version:** v3.1
 >
-> Core ~9KB always-loaded · Reference on-demand · One-click init. Grown from real failures and iterations. Not designed — evolved.
+> Core ~10KB always-loaded · Writing spec and reference on-demand · One-click init. Grown from real failures and iterations. Not designed — evolved.
